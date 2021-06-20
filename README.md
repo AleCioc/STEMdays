@@ -1,5 +1,14 @@
 # STEMdays
 
-Roba per Python per ora dentro cartella giulia.
+So far:
+
+alecioc
+  - Esercizi Pandas
+
+dena
+  - Prima dashboard Streamlit
+
+giulia
+  - Esercizi Python
 
 Ciaoo!
