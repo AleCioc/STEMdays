@@ -12,6 +12,8 @@ st.title('My first app')
 st.header("This will be in all pages")
 st.subheader("Select a page from the left!")
 
+st.write("This is some random text")
+
 
 
 #Sidebar
