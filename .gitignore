@@ -1,3 +1,7 @@
 .idea
 .idea/
+venv/
+.venv
+.ipynb_checkpoints/
+__pycache__/
 
