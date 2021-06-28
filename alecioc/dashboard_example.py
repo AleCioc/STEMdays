@@ -3,6 +3,8 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 from youtubesearchpython import VideosSearch
+from ast import literal_eval
+import wikipedia
 
 
 st.set_page_config(
@@ -22,6 +24,8 @@ sidebar_page = st.sidebar.selectbox(
         "Pagina 1",
         "Pagina 2",
         "Pagina 3",
+        "Pagina 4",
+        "Pagina 5",
     ]
 )
 
@@ -71,7 +75,6 @@ elif sidebar_page == "Pagina 2":
     # Questo serve per convertire le colonne che dovrebbero essere di tipo lista ma vengono lette come stringhe dal csv
     # Magari wrappiamo alcune di queste robe e gliele diamo se servono
     # (per esempio riconoscere artisti diversi in un featuring)
-    from ast import literal_eval
     df.artists = df.artists.apply(literal_eval)
     name_and_artists_string = " ".join([df.iloc[0]["name"]] + [artist for artist in df.iloc[0]["artists"]])
     st.subheader(name_and_artists_string)
@@ -107,3 +110,51 @@ elif sidebar_page == "Pagina 3":
         tooltip=['name', 'popularity']
     )
     st.altair_chart(bars, use_container_width=True)
+
+elif sidebar_page == "Pagina 4":
+
+    st.header("Pagina Wikipedia dell'artista")
+    st.subheader("Qui inseriamo il riassunto della pagina Wikipedia dell'artista")
+
+    df = pd.read_csv(os.path.join("data", "10k_random_tracks.csv"), index_col=0)
+    df.artists = df.artists.apply(literal_eval)
+
+    st.write(df.artists.iloc[0][0])
+    st.write(wikipedia.summary(df.artists.iloc[0][0]))
+
+elif sidebar_page == "Pagina 5":
+
+    st.header("Musixmatch API")
+
+    from musixmatch import Musixmatch
+    musixmatch = Musixmatch('7d4e5be9459834920f0d3b95fadd4ab2')
+
+    df = pd.read_csv(os.path.join("data", "10k_random_tracks.csv"), index_col=0)
+    df.artists = df.artists.apply(literal_eval)
+
+    st.subheader("Top artista US")
+    # Write top artist in US
+    st.write(
+        musixmatch.chart_artists(1, 1)["message"]["body"]["artist_list"][0]["artist"][
+            "artist_name"
+        ]
+    )
+
+    st.subheader("Top traccia US")
+    json_track = musixmatch.chart_tracks_get(1, 1, f_has_lyrics=True)["message"]["body"]["track_list"][0]["track"]
+    # Write top track in US
+    st.write(json_track["artist_name"] + " - " + json_track["track_name"])
+
+    st.subheader("Esempio ricerca testo da traccia + artista")
+    # Search track by artist name + track name
+    track_id = musixmatch.track_search(
+        q_artist=df.artists.iloc[0][0],
+        q_track=df.iloc[0]["name"],
+        page_size=10, page=1, s_track_rating='desc'
+    )["message"]["body"]["track_list"][0]["track"]["track_id"]
+    st.write(
+        track_id
+    )
+    st.write(
+        musixmatch.track_lyrics_get(track_id)["message"]["body"]["lyrics"]["lyrics_body"]
+    )
