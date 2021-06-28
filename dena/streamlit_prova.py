@@ -88,7 +88,7 @@ elif bla == "Page 2":
 
 elif bla == "Page 3":
     #Columns, button
-    left_column, right_column = st.beta_columns(2)
+    left_column, right_column = st.beta_columns((5, 1))
     pressed = left_column.button('Press me?')
     if pressed:
         right_column.write("Woohoo!")
