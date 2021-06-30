@@ -178,7 +178,7 @@ elif sidebar_page == "Pagina 6":
         unsafe_allow_html=True
     )
 
-    gdf = gpd.read_file("UIA_World_Countries_Boundaries/World_Countries__Generalized_.dbf")
+    gdf = gpd.read_file("../World_Countries__Generalized_.dbf")
 
     fig = px.choropleth(gdf)
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
