@@ -5,6 +5,8 @@ import pandas as pd
 from youtubesearchpython import VideosSearch
 from ast import literal_eval
 import wikipedia
+import geopandas as gpd
+import plotly.express as px
 
 
 st.set_page_config(
@@ -26,6 +28,7 @@ sidebar_page = st.sidebar.selectbox(
         "Pagina 3",
         "Pagina 4",
         "Pagina 5",
+        "Pagina 6",
     ]
 )
 
@@ -127,7 +130,7 @@ elif sidebar_page == "Pagina 5":
     st.header("Musixmatch API")
 
     from musixmatch import Musixmatch
-    musixmatch = Musixmatch('7d4e5be9459834920f0d3b95fadd4ab2')
+    musixmatch = Musixmatch('b8f7e41e8b76345118eb2993e19ee82d')
 
     df = pd.read_csv(os.path.join("data", "10k_random_tracks.csv"), index_col=0)
     df.artists = df.artists.apply(literal_eval)
@@ -158,3 +161,26 @@ elif sidebar_page == "Pagina 5":
     st.write(
         musixmatch.track_lyrics_get(track_id)["message"]["body"]["lyrics"]["lyrics_body"]
     )
+
+elif sidebar_page == "Pagina 6":
+
+    st.markdown(
+        """
+        <style>
+        .reportview-container {
+            background: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366")
+        }
+       .sidebar .sidebar-content {
+            background: url("url_goes_here")
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    gdf = gpd.read_file("UIA_World_Countries_Boundaries/World_Countries__Generalized_.dbf")
+
+    fig = px.choropleth(gdf)
+    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+    fig.show()
+
