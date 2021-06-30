@@ -410,12 +410,12 @@ elif sidebar_page == "Tendenze del mondo":
                         projection="mercator",
                         hover_data=hover_data1+hover_data2,
                         )
-    fig.update_layout(
-        width=1600,
-        height=800,
-    )
+    #fig.update_layout(
+    #    width=1600,
+    #    height=800,
+    #)
     #fig = px.choropleth(gdf)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
     #Selectbox
     option = st.selectbox("Scegli la nazione", df_artists.country.unique())
