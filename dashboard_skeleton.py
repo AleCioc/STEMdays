@@ -369,8 +369,12 @@ elif sidebar_page == "Tendenze del mondo":
         country_artists_ranking = df_artists[df_artists.country == country][["artist_name"]]
         for i in range(10):
             if country in gdf.index.values:
-                gdf.loc[country, "artist_" + str(i)] = country_artists_ranking.values[i]
-                #print(country, i, country_artists_ranking.iloc[i].values[0], gdf.at[country, "artist_" + str(i)])
+                try:
+                    gdf.loc[country, "artist_" + str(i)] = country_artists_ranking.values[i]
+                    #print(country, i, country_artists_ranking.iloc[i].values[0], gdf.at[country, "artist_" + str(i)])
+                except:
+                    print("gdf", gdf.loc[country, "artist_" + str(i)])
+                    print("current_artist", country_artists_ranking.values[i])
 
     for country, country_df in df_tracks.groupby("country"):
         country_tracks_ranking = df_tracks[df_tracks.country == country][["track_name"]]
