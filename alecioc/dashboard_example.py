@@ -5,7 +5,7 @@ import pandas as pd
 from youtubesearchpython import VideosSearch
 from ast import literal_eval
 import wikipedia
-import geopandas as gpd
+#import geopandas as gpd
 import plotly.express as px
 
 
