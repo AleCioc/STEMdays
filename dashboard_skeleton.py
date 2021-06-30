@@ -171,55 +171,55 @@ elif sidebar_page == "Accordi":
 
     expander = ciao2.beta_expander("Aloe Blacc")
     if expander.button("I need a dollar"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/queen/another-one-bites-the-dust-chords-1090617")
+        expander.write("https://tabs.ultimate-guitar.com/tab/aloe-blacc/i-need-a-dollar-chords-940222")
 
     expander = ciao2.beta_expander("Raffaella Carrà")
     if expander.button("Tanti Auguri"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/1727358")
+        expander.write("https://tabs.ultimate-guitar.com/tab/1727358")
 
     expander = ciao2.beta_expander("Rihanna")
     if expander.button("California king bed"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/rihanna/california-king-bed-chords-1057199")
+        expander.write("https://tabs.ultimate-guitar.com/tab/rihanna/california-king-bed-chords-1057199")
 
     if expander.button("What's my name"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/rihanna/whats-my-name-chords-1020630")
+        expander.write("https://tabs.ultimate-guitar.com/tab/rihanna/whats-my-name-chords-1020630")
 
     expander = ciao2.beta_expander("Slipknot")
     if expander.button("Psychosocial"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/slipknot/psychosocial-chords-744228")
+        expander.write("https://tabs.ultimate-guitar.com/tab/slipknot/psychosocial-chords-744228")
 
     expander = ciao2.beta_expander("Taylor Swift")
     if expander.button("I knew you were trouble"):
-        webbrowser.open_new_tab(
+        expander.write(
             "https://tabs.ultimate-guitar.com/tab/taylor-swift/i-knew-you-were-trouble-chords-1187569")
 
     expander = ciao2.beta_expander("Tha Supreme")
     if expander.button("No 14"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/tha-supreme/no14-chords-3126932")
+        expander.write("https://tabs.ultimate-guitar.com/tab/tha-supreme/no14-chords-3126932")
 
     expander = ciao2.beta_expander("The Lumineers")
     if expander.button("Ho Hey"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/the-lumineers/ho-hey-chords-1047662")
+        expander.write("https://tabs.ultimate-guitar.com/tab/the-lumineers/ho-hey-chords-1047662")
 
     expander = ciao2.beta_expander("The runaways")
     if expander.button("Cherry bomb"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/the-runaways/cherry-bomb-chords-366491")
+        expander.write("https://tabs.ultimate-guitar.com/tab/the-runaways/cherry-bomb-chords-366491")
 
     expander = ciao2.beta_expander("Tom Odell")
     if expander.button("Another love"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/tom-odell/another-love-chords-1198980")
+        expander.write("https://tabs.ultimate-guitar.com/tab/tom-odell/another-love-chords-1198980")
 
     expander = ciao2.beta_expander("Travis Scott")
     if expander.button("Goosebumps"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/travis-scott/goosebumps-chords-1951495")
+        expander.write("https://tabs.ultimate-guitar.com/tab/travis-scott/goosebumps-chords-1951495")
 
     expander = ciao2.beta_expander("Twentyone pilots ")
     if expander.button("Migraine"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/twenty-one-pilots/migraine-chords-1453839")
+        expander.write("https://tabs.ultimate-guitar.com/tab/twenty-one-pilots/migraine-chords-1453839")
 
     expander = ciao2.beta_expander("Vans Joy")
     if expander.button("Fine and the flood"):
-        webbrowser.open_new_tab("https://tabs.ultimate-guitar.com/tab/vance-joy/fire-and-the-flood-chords-1754348")
+        expander.write("https://tabs.ultimate-guitar.com/tab/vance-joy/fire-and-the-flood-chords-1754348")
 
 elif sidebar_page == "Grafici":
 
