@@ -80,7 +80,7 @@ elif sidebar_page == "Gallery":
     colonna1, colonna2 = st.beta_columns((4, 2))
 
     colonna1.title("Gallery")
-    colonna1.header("Ecco i video delle canzoni disponibili.")
+    colonna1.header("Qui puoi vedere i video delle canzoni disponibili")
 
 
     df = pd.read_csv(os.path.join("10k_random_tracks.csv"), index_col=0)
@@ -93,6 +93,7 @@ elif sidebar_page == "Gallery":
     df.artists = df.artists.apply(literal_eval)
     riga = df[df.name == option].iloc[0]
     name_and_artists_string = " ".join([riga["name"]] + [artist for artist in riga["artists"]])
+    colonna2.header("Canzone scelta")
     colonna2.subheader(name_and_artists_string)
     videosSearch = VideosSearch(
         name_and_artists_string,
