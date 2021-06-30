@@ -44,11 +44,12 @@ if sidebar_page == "Home":
 
     st.title("Benvenutə")
 
-    st.header("Questo è il nostro sito")
+    st.header("Questo è il nostro sito.")
+    st.subheader("Usa il menu a sinistra per navigare.")
 
     # Modo facile di scrivere testo su streamlit
 
-    st.write("Allora, ora vi elencherò tutte le pagine del nostro favoloso sito")
+    st.write("Qui sotto c'è una breve spiegazione di tutte le pagine:")
 
     colonna1, colonna2 = st.beta_columns(2)
 
