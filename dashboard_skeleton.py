@@ -68,7 +68,7 @@ if sidebar_page == "Home":
     expander = colonna1.beta_expander("Bio Artisti")
     expander.write("Tutte le informazioni necessarie di ogni artista a disposizione con un click")
 
-    expander = colonna1.beta_expander("Mappe, non ricordo il nome")
+    expander = colonna1.beta_expander("Tendenze del mondo")
     expander.write("Scoprirai quali sono le canzone più ascoltate nei vari paesi del mondo")
 
     expander = colonna1.beta_expander("Il nostro Team")
