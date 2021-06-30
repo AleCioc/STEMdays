@@ -358,7 +358,6 @@ elif sidebar_page == "Tendenze del mondo":
 
 
     gdf = gpd.read_file("World_Countries__Generalized_.dbf").set_index("ISO").sort_index()
-    st.dataframe(gdf.drop("geometry", axis=1))
 
 
     for i in range(10):
@@ -391,21 +390,19 @@ elif sidebar_page == "Tendenze del mondo":
                     print("gdf", gdf.loc[country, "track_" + str(i)])
                     print("currenttrack_", country_tracks_ranking.values[i])
 
+    st.subheader("Dataset completo")
     st.dataframe(gdf.drop("geometry", axis=1))
 
     p = gdf.plot(facecolor= "lightgreen", edgecolor="teal")
     #st.pyplot(p.figure)
-
-
-
-
     gdf = gdf.dropna()
     #st.write(gdf)
 
     hover_data1 = [f"artist_{i}" for i in range(10)]
     hover_data2 = [f"track_{i}" for i in range(10)]
 
-
+    st.subheader("Mappa interattiva")
+    st.write("Puoi anche ingrandire la figura con le ultime freccette a destra")
     fig = px.choropleth(gdf,
                         geojson=gdf.geometry,
                         locations=gdf.index,
@@ -419,6 +416,7 @@ elif sidebar_page == "Tendenze del mondo":
     #fig = px.choropleth(gdf)
     st.plotly_chart(fig, use_container_width=True)
 
+    st.subheader("Guarda le classifiche di una nazione")
     #Selectbox
     option = st.selectbox("Scegli la nazione", df_artists.country.unique())
     st.header("Artisti")
