@@ -10,4 +10,4 @@ wikipedia
 pymusixmatch
 geopandas
 plotly
-youtube-search-python
+youtube-search-python==1.4.6
