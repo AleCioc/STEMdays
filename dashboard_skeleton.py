@@ -355,7 +355,7 @@ elif sidebar_page == "Tendenze del mondo":
 
 
 
-    gdf = gpd.read_file("World_Countries__Generalized_.dbf").set_index("ISO")
+    gdf = gpd.read_file("World_Countries__Generalized_.dbf").set_index("ISO", drop=False).sort_index()
     st.dataframe(gdf.drop("geometry", axis=1))
 
 
