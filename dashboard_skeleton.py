@@ -367,13 +367,13 @@ elif sidebar_page == "Tendenze del mondo":
     for country, country_df in df_artists.groupby("country"):
         country_artists_ranking = df_artists[df_artists.country == country][["artist_name"]]
         for i in range(10):
-            gdf.loc[country, "artist_" + str(i)] = country_artists_ranking.iloc[i].values[0]
+            gdf.loc[country, "artist_" + str(i)] = country_artists_ranking.values[i]
             #print(country, i, country_artists_ranking.iloc[i].values[0], gdf.at[country, "artist_" + str(i)])
 
     for country, country_df in df_tracks.groupby("country"):
         country_tracks_ranking = df_tracks[df_tracks.country == country][["track_name"]]
         for i in range(10):
-            gdf.loc[country, "track_" + str(i)] = country_tracks_ranking.iloc[i].values[0]
+            gdf.loc[country, "track_" + str(i)] = country_tracks_ranking.values[i]
             #print(country, i, country_tracks_ranking.iloc[i].values[0], gdf.at[country, "track_" + str(i)])
 
     st.dataframe(gdf.drop("geometry", axis=1))
