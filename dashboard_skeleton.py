@@ -172,6 +172,149 @@ elif sidebar_page == "Accordi":
     expander = ciao2.beta_expander("Aloe Blacc")
     if expander.button("I need a dollar"):
         expander.write("https://tabs.ultimate-guitar.com/tab/aloe-blacc/i-need-a-dollar-chords-940222")
+    
+    expander = ciao2.beta_expander("Arctic Monkeys")
+    if expander.button("I wanna be yours"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/arctic-monkeys/i-wanna-be-yours-chords-1417191")
+    
+    expander = ciao2.beta_expander("Ariana Grande")
+    if expander.button("The way"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/ariana-grande/the-way-chords-1242015")
+    
+    expander = ciao2.beta_expander("Avril Lavigne")
+    if expander.button("When you're gone"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/avril-lavigne/when-youre-gone-chords-476244")
+    
+    expander = ciao2.beta_expander("Billie Eilish")
+    if expander.button("Everything I wanted"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/billie-eilish/everything-i-wanted-chords-2892650")
+    
+    expander = ciao2.beta_expander("Bruce Springsteen")
+    if expander.button("The rising"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/bruce-springsteen/the-rising-chords-1088613")
+    
+    expander = ciao2.beta_expander("Bruno Mars")
+    if expander.button("It will rain"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/bruno-mars/it-will-rain-chords-1096050")
+    
+    expander = ciao2.beta_expander("Calcutta")
+    if expander.button("Frosinone"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/calcutta/frosinone-chords-1800785")
+    
+    expander = ciao2.beta_expander("Calvin Harris")
+    if expander.button("Summer"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/calvin-harris/summer-chords-1469858")
+    
+    expander = ciao2.beta_expander("Cristina Aguilera")
+    if expander.button("Genie in a bottle"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/christina-aguilera/genie-in-a-bottle-chords-1193224")
+    
+    expander = ciao2.beta_expander("Ed Sheeran")
+    if expander.button("Sing"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/christina-aguilera/genie-in-a-bottle-chords-1193224")
+
+    expander = ciao2.beta_expander("Edith Whiskers")
+    if expander.button("Home"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/christina-aguilera/genie-in-a-bottle-chords-1193224")
+    
+    expander = ciao2.beta_expander("Ella Fitzgerald")
+    if expander.button("Let's fall in love"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/finneas/lets-fall-in-love-for-the-night-chords-2549901")
+
+    expander = ciao2.beta_expander("Eric Clapton")
+    if expander.button("Running on faith"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/eric-clapton/running-on-faith-chords-63608")
+
+    expander = ciao2.beta_expander("Etta James")
+    if expander.button("At last"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/etta-james/at-last-chords-813094")
+
+    expander = ciao2.beta_expander("Fitz and the Tantrums")
+    if expander.button("Out of my league"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/fitz-and-the-tantrums/out-of-my-league-chords-1401040")
+
+    expander = ciao2.beta_expander("Gloria Gaynor")
+    if expander.button("I will survive"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/gloria-gaynor/i-will-survive-chords-991389")
+
+    expander = ciao2.beta_expander("Green Day")
+    if expander.button("Having a blast"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/green-day/having-a-blast-chords-1095148")
+
+    if expander.button("Oh love"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/green-day/oh-love-chords-1169046")
+
+    expander = ciao2.beta_expander("Guns N' Roses")
+    if expander.button("Sweet child o' mine"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/guns-n-roses/sweet-child-o-mine-chords-176076")
+
+    expander = ciao2.beta_expander("Halsey")
+    if expander.button("New americana"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/halsey/new-americana-chords-1729709")
+
+    if expander.button("Without me"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/halsey/without-me-chords-2485194")
+
+    expander = ciao2.beta_expander("Imagine dragons")
+    if expander.button("On top of the world"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/imagine-dragons/on-top-of-the-world-chords-1164788")
+
+    expander = ciao2.beta_expander("Justin Bieber")
+    if expander.button("Love yourself"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199")
+
+    expander = ciao2.beta_expander("Kanye West")
+    if expander.button("Hell of a life"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/kanye-west/hell-of-a-life-tabs-1465911")
+
+    if expander.button("Stronger"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/kanye-west/stronger-chords-566584")
+
+    expander = ciao2.beta_expander("Lady Gaga")
+    if expander.button("The edge of glory"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/lady-gaga/the-edge-of-glory-chords-1055910")
+
+    expander = ciao2.beta_expander("Lana del rey")
+    if expander.button("Pretty when you cry"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/lana-del-rey/pretty-when-you-cry-chords-1493667")
+
+    expander = ciao2.beta_expander("Lil Peep")
+    if expander.button("Falling down"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/lil-peep/falling-down-chords-2475082")
+
+    expander = ciao2.beta_expander("Maroon 5")
+    if expander.button("One more night"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/maroon-5/one-more-night-chords-1164814")
+
+    expander = ciao2.beta_expander("Nirvana")
+    if expander.button("Lithium"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/nirvana/lithium-chords-1119299")
+
+    expander = ciao2.beta_expander("Oasis")
+    if expander.button("Sunday morning call"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/oasis/sunday-morning-call-chords-6080")
+
+    expander = ciao2.beta_expander("Ozuna")
+    if expander.button("Baila baila baila"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/ozuna/baila-baila-baila-chords-2566122")
+
+    expander = ciao2.beta_expander("Pink Floyd")
+    if expander.button("Money"):
+        expander.write("https://tabs.ultimate-guitar.com/tab/pink-floyd/money-chords-43461")
+
+    expander = ciao2.beta_expander("Queen")
+    if expander.button("Another one lights the dust"):
+        expander.write(
+            "https://tabs.ultimate-guitar.com/tab/queen/another-one-bites-the-dust-chords-1090617")
 
     expander = ciao2.beta_expander("Raffaella Carrà")
     if expander.button("Tanti Auguri"):
@@ -217,7 +360,7 @@ elif sidebar_page == "Accordi":
     if expander.button("Migraine"):
         expander.write("https://tabs.ultimate-guitar.com/tab/twenty-one-pilots/migraine-chords-1453839")
 
-    expander = ciao2.beta_expander("Vans Joy")
+    expander
     if expander.button("Fine and the flood"):
         expander.write("https://tabs.ultimate-guitar.com/tab/vance-joy/fire-and-the-flood-chords-1754348")
 
@@ -447,11 +590,18 @@ elif sidebar_page == "Il nostro Team":
 
     # Modo facile di scrivere testo su streamlit
     colonna1.title("MODESTEM")
+
+    colonna1.image("photo5976749182444222219.jpeg")
+    colonna1.write("""
+        Irene Birolo, Beatrice Berra, Cristina Russo, Mia Marchese, Ilaria Vione, 
+        Silvia Cresto, Alissa Rizzo, Emily Glanville, Alice Mocellin, Carola Santoro
+    """)
+
     colonna1.write("Selezionando nel box qui accanto potrai trovare maggiori informazioni su di noi!")
 
     clicca_qui = colonna2.selectbox(
         "Clicca qui",
-        ["", "Chi siamo?", "Il nostro progetto", "Come abbiamo lavorato?", "Chi ci ha aiutato?",
+        ["Chi siamo?", "Il nostro progetto", "Come abbiamo lavorato?", "Chi ci ha aiutato?",
          "Cosa abbiamo imparato?"]
     )
     if clicca_qui == "Chi siamo?":
