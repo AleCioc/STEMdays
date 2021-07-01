@@ -497,16 +497,11 @@ elif sidebar_page == "Tendenze del mondo":
     df_artists = pd.read_csv("top_artists_by_country.csv", index_col=0)
     df_tracks = pd.read_csv("top_tracks_by_country.csv", index_col=0)
 
-
-
     gdf = gpd.read_file("World_Countries__Generalized_.dbf").set_index("ISO").sort_index()
-
 
     for i in range(10):
         gdf["artist_" + str(i)] = None
         gdf["track_" + str(i)] = None
-
-
 
     for country, country_df in df_artists.groupby("country"):
         country_artists_ranking = df_artists[df_artists.country == country][["artist_name"]]
@@ -514,7 +509,6 @@ elif sidebar_page == "Tendenze del mondo":
             if country in gdf.index.values:
                 try:
                     gdf.loc[country, "artist_" + str(i)] = country_artists_ranking.values[i]
-                    #print(country, i, country_artists_ranking.iloc[i].values[0], gdf.at[country, "artist_" + str(i)])
                 except:
                     print("gdf", gdf.loc[country, "artist_" + str(i)])
                     print("current_artist", country_artists_ranking.values[i])
@@ -527,18 +521,12 @@ elif sidebar_page == "Tendenze del mondo":
                 print("currenttrack_", country_tracks_ranking.values[i])
                 try:
                     gdf.loc[country, "track_" + str(i)] = country_tracks_ranking.values[i]
-                    #print(country, i, country_tracks_ranking.iloc[i].values[0], gdf.at[country, "track_" + str(i)])
                 except:
                     print("gdf", gdf.loc[country, "track_" + str(i)])
                     print("currenttrack_", country_tracks_ranking.values[i])
 
-    st.subheader("Dataset completo")
-    st.dataframe(gdf.drop("geometry", axis=1))
-
     p = gdf.plot(facecolor= "lightgreen", edgecolor="teal")
-    #st.pyplot(p.figure)
     gdf = gdf.dropna()
-    #st.write(gdf)
 
     hover_data1 = [f"artist_{i}" for i in range(10)]
     hover_data2 = [f"track_{i}" for i in range(10)]
@@ -551,15 +539,9 @@ elif sidebar_page == "Tendenze del mondo":
                         projection="mercator",
                         hover_data=hover_data1+hover_data2,
                         )
-    #fig.update_layout(
-    #    width=1600,
-    #    height=800,
-    #)
-    #fig = px.choropleth(gdf)
     st.plotly_chart(fig, use_container_width=True)
 
     st.subheader("Guarda le classifiche di una nazione")
-    #Selectbox
     option = st.selectbox("Scegli la nazione", df_artists.country.unique())
     st.header("Artisti")
     st.dataframe(df_artists[df_artists.country == option][["artist_name"]])
