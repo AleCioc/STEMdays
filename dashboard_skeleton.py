@@ -596,9 +596,9 @@ elif sidebar_page == "Il nostro Team":
         Silvia Cresto, Alissa Rizzo, Emily Glanville, Alice Mocellin, Carola Santoro
     """)
 
-    colonna1.write("Selezionando nel box qui accanto potrai trovare maggiori informazioni su di noi!")
+    colonna1.write("Selezionando nel box qui sotto potrai trovare maggiori informazioni su di noi!")
 
-    clicca_qui = colonna2.selectbox(
+    clicca_qui = colonna1.selectbox(
         "Clicca qui",
         ["Chi siamo?", "Il nostro progetto", "Come abbiamo lavorato?", "Chi ci ha aiutato?",
          "Cosa abbiamo imparato?"]
