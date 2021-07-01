@@ -540,7 +540,7 @@ elif sidebar_page == "Tendenze del mondo":
                         hover_data=hover_data1+hover_data2,
                         )
     fig.update_layout(
-        height=1000,
+        height=800,
     )
     st.plotly_chart(fig, use_container_width=True)
 
