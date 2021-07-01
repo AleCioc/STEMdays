@@ -539,9 +539,13 @@ elif sidebar_page == "Tendenze del mondo":
                         projection="mercator",
                         hover_data=hover_data1+hover_data2,
                         )
+    fig.update_layout(
+        height=1000,
+    )
     st.plotly_chart(fig, use_container_width=True)
 
     st.subheader("Guarda le classifiche di una nazione")
+    #Selectbox
     option = st.selectbox("Scegli la nazione", df_artists.country.unique())
     st.header("Artisti")
     st.dataframe(df_artists[df_artists.country == option][["artist_name"]])
