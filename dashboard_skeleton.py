@@ -556,20 +556,6 @@ elif sidebar_page == "Tendenze del mondo":
                            ["track_name", "instrumental", "explicit", "has_lyrics", "num_favourite", "track_rating"]])
 
 elif sidebar_page == "Il nostro Team":
-    st.markdown(
-        """ 
-        <style> 
-        .reportview-container { 
-            background-image: url("https://th.bing.com/th/id/R7067c29f2c2336c23c827cfda44e7c61?rik=hvOhtP6sCtzDSg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fFree-Download-Gif-Pictures.gif&ehk=nnQum4ehhVSqGRHqIrTamXV8HHzYHKqwfEUj6WU%2fA0k%3d&risl=&pid=ImgRaw");
-            background-size: cover;
-        } 
-       .sidebar .sidebar-content { 
-            background: url("url_goes_here") 
-        } 
-        </style> 
-        """,
-        unsafe_allow_html=True
-    )
 
     colonna1, colonna2 = st.beta_columns((4, 2))
 
