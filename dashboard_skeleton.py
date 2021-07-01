@@ -313,8 +313,7 @@ elif sidebar_page == "Accordi":
 
     expander = ciao2.beta_expander("Queen")
     if expander.button("Another one lights the dust"):
-        expander.write(
-            "https://tabs.ultimate-guitar.com/tab/queen/another-one-bites-the-dust-chords-1090617")
+        expander.write("https://tabs.ultimate-guitar.com/tab/queen/another-one-bites-the-dust-chords-1090617")
 
     expander = ciao2.beta_expander("Raffaella Carrà")
     if expander.button("Tanti Auguri"):
@@ -360,7 +359,7 @@ elif sidebar_page == "Accordi":
     if expander.button("Migraine"):
         expander.write("https://tabs.ultimate-guitar.com/tab/twenty-one-pilots/migraine-chords-1453839")
 
-    expander
+    expander = ciao2.beta_expander("Vance joy")
     if expander.button("Fine and the flood"):
         expander.write("https://tabs.ultimate-guitar.com/tab/vance-joy/fire-and-the-flood-chords-1754348")
 
